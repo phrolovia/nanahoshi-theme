@@ -129,6 +129,111 @@ tasks {
         gradleVersion = providers.gradleProperty("gradleVersion").get()
     }
 
+    register("removeItalics") {
+        description = "Remove FONT_TYPE italic options from all XML theme files"
+        group = "build"
+        
+        val themeDir = layout.projectDirectory.dir("src/main/resources/themes")
+        
+        doLast {
+            if (!themeDir.asFile.exists()) {
+                println("Theme directory not found: ${themeDir.asFile.absolutePath}")
+                return@doLast
+            }
+            
+            var filesProcessed = 0
+            var replacementCount = 0
+            
+            themeDir.asFileTree.matching {
+                include("**/*.xml")
+            }.forEach { xmlFile ->
+                val content = xmlFile.readText()
+                val newContent = content.replace("""<option name="FONT_TYPE" value="2"/>""", "")
+                
+                if (content != newContent) {
+                    val matches = """<option name="FONT_TYPE" value="2"/>""".toRegex().findAll(content).count()
+                    replacementCount += matches
+                    xmlFile.writeText(newContent)
+                }
+                filesProcessed++
+            }
+            
+            println("Processed $filesProcessed XML files, removed $replacementCount italic FONT_TYPE options")
+        }
+    }
+
+    register("cleanProperties") {
+        description = "Remove properties starting with specific words from JSON theme files"
+        group = "build"
+        
+        val themeDir = layout.projectDirectory.dir("src/main/resources/themes")
+        val propertyPrefixes = arrayOf("doki") // Add more prefixes as needed
+        
+        doLast {
+            if (!themeDir.asFile.exists()) {
+                println("Theme directory not found: ${themeDir.asFile.absolutePath}")
+                return@doLast
+            }
+            
+            var filesProcessed = 0
+            var totalRemovedProperties = 0
+            
+            themeDir.asFileTree.matching {
+                include("**/*.json")
+            }.forEach { jsonFile ->
+                val content = jsonFile.readText()
+                val lines = content.lines().toMutableList()
+                var removedInFile = 0
+                
+                // Remove lines that contain properties starting with any prefix
+                val iterator = lines.iterator()
+                var lineIndex = 0
+                val linesToRemove = mutableListOf<Int>()
+                
+                while (iterator.hasNext()) {
+                    val line = iterator.next()
+                    val trimmedLine = line.trim()
+                    
+                    // Check if this line contains a property that starts with any of our prefixes
+                    val shouldRemove = propertyPrefixes.any { prefix ->
+                        trimmedLine.matches(""""${prefix}[^"]*"\s*:.*""".toRegex(RegexOption.IGNORE_CASE))
+                    }
+                    
+                    if (shouldRemove) {
+                        linesToRemove.add(lineIndex)
+                        removedInFile++
+                    }
+                    lineIndex++
+                }
+                
+                // Remove lines in reverse order to preserve indices
+                linesToRemove.sortedDescending().forEach { index ->
+                    lines.removeAt(index)
+                }
+                
+                if (removedInFile > 0) {
+                    // Fix comma issues: ensure proper JSON structure
+                    val modifiedContent = lines.joinToString("\n")
+                        .replace(""",(\s*[}\]])""".toRegex(), "$1") // Remove trailing commas before closing braces
+                        .replace("""(\w+|"[^"]*")(\s*\n\s*)(\w+|"[^"]*")""".toRegex(), "$1,$2$3") // Add missing commas between properties
+                        .replace(""",(\s*,)""".toRegex(), ",") // Remove duplicate commas
+                        .replace("""\n\s*\n\s*\n""".toRegex(), "\n\n") // Clean up multiple newlines
+                    
+                    jsonFile.writeText(modifiedContent)
+                    totalRemovedProperties += removedInFile
+                }
+                
+                filesProcessed++
+            }
+            
+            println("Processed $filesProcessed JSON files, removed $totalRemovedProperties properties matching prefixes: ${propertyPrefixes.joinToString(", ")}")
+        }
+    }
+
+    processResources {
+        dependsOn("removeItalics", "cleanProperties")
+    }
+
     publishPlugin {
         dependsOn(patchChangelog)
     }

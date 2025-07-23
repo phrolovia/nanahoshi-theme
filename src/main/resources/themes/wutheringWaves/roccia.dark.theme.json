@@ -3,7 +3,7 @@
     "name": "Wuthering Waves: Roccia",
     "dark": true,
     "author": "Nanahoshi",
-    "editorScheme": "/themes/wutheringWaves/roccia-dark.xml",
+    "editorScheme": "/themes/wutheringWaves/roccia.dark.xml",
     "colors": {
         "accentColor": "#F060B0",
         "accentColorLessTransparent": "#F060B09A",
