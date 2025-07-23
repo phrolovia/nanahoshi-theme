@@ -1,4 +1,4 @@
-# Nanahoshi Theme
+# Nanahoshi Theme Suite
 
 A beautiful theme collection for JetBrains IDEs featuring carefully crafted color palettes.
 

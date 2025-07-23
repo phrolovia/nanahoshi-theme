@@ -1,4 +1,4 @@
-<scheme name="Cantarella Dark" version="142" parent_scheme="Darcula">
+<scheme name="Wuthering Waves: Cantarella" version="142" parent_scheme="Darcula">
     <option name="FONT_SCALE" value="1.0"/>
     <metaInfo>
         <property name="created">2019-12-02T04:08:34</property>
@@ -178,7 +178,7 @@
         </option>
         <option name="ANONYMOUS_CLASS_NAME_ATTRIBUTES">
             <value>
-                <option name="FOREGROUND" value="E8C8F0"/>
+                <option name="FOREGROUND" value="8A95E5"/>
                 <option name="FONT_TYPE" value="2"/>
             </value>
         </option>
@@ -716,7 +716,7 @@
         </option>
         <option name="DEFAULT_KEYWORD">
             <value>
-                <option name="FOREGROUND" value="7AEBF0"/>
+                <option name="FOREGROUND" value="B8C0F0"/>
             </value>
         </option>
         <option name="DEFAULT_LINE_COMMENT">
@@ -733,17 +733,17 @@
         </option>
         <option name="DEFAULT_NUMBER">
             <value>
-                <option name="FOREGROUND" value="F0D890"/>
+                <option name="FOREGROUND" value="5058A0"/>
             </value>
         </option>
         <option name="DEFAULT_OPERATION_SIGN">
             <value>
-                <option name="FOREGROUND" value="C8A8F0"/>
+                <option name="FOREGROUND" value="8A95E5"/>
             </value>
         </option>
         <option name="DEFAULT_PARAMETER">
             <value>
-                <option name="FOREGROUND" value="F0A8D8"/>
+                <option name="FOREGROUND" value="5058A0"/>
                 <option name="FONT_TYPE" value="2"/>
             </value>
         </option>
@@ -784,7 +784,7 @@
         </option>
         <option name="DEFAULT_STRING">
             <value>
-                <option name="FOREGROUND" value="A8D8EA"/>
+                <option name="FOREGROUND" value="5058A0"/>
             </value>
         </option>
         <option name="DEFAULT_TAG">
