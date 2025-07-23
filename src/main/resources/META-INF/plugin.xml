@@ -13,6 +13,8 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <themeProvider id="cantarella-dark" path="/themes/wutheringWaves/cantarella-dark.theme.json"/>
+        <themeProvider id="kafka-dark" path="/themes/honkaiStarRail/kafka-dark.theme.json"/>
         <themeProvider id="roccia-dark" path="/themes/wutheringWaves/roccia-dark.theme.json"/>
+        <themeProvider id="ruanmei-dark" path="/themes/honkaiStarRail/ruanmei-dark.theme.json"/>
     </extensions>
 </idea-plugin>
