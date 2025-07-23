@@ -65,6 +65,7 @@
         "lightEditorColor": "#201E24",
         "lineNumberColor": "#7A707C",
         "nonProjectFileScopeColor": "#201D23",
+        "parameterColor": "#DAB987",
         "popupMask": "#1A181B9A",
         "searchBackground": "#7E3F5A",
         "searchForeground": "#F0EFF2",
