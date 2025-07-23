@@ -1,0 +1,18 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.nanahoshi.theme</id>
+    <name>Nanahoshi Theme</name>
+    <vendor>Nanahoshi</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <description><![CDATA[
+    A collection of beautiful themes for JetBrains IDEs featuring Nanahoshi color palette.
+    Includes both dark and light variants with carefully crafted color schemes.
+    ]]></description>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="nanahoshi-dark" path="/themes/nanahoshi-dark.theme.json"/>
+        <themeProvider id="nanahoshi-light" path="/themes/nanahoshi-light.theme.json"/>
+    </extensions>
+</idea-plugin>
