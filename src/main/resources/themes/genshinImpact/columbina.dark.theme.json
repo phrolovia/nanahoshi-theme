@@ -22,7 +22,7 @@
         "codeBlock": "#121219",
         "comments": "#6272a4",
         "completionWindowBackground": "#242430",
-        "constantColor": "#3A1C3C",
+        "constantColor": "#9590FF",
         "contrastColor": "#2D2A35",
         "diff.conflict": "#703A60",
         "diff.deleted": "#4A3F5A",
@@ -67,7 +67,7 @@
         "lineNumberColor": "#5C5C6A",
         "nonProjectFileScopeColor": "#0D0F1A",
         "parameterColor": "#B0A0D8",
-        "popupMask": "#100E1505",
+        "popupMask": "#100E1509",
         "searchBackground": "#A8F1FF",
         "searchForeground": "#0D0F1A",
         "secondaryBackground": "#161620",
@@ -87,6 +87,7 @@
         "terminal.ansiYellow": "#EFA554",
         "testScopeColor": "#111216",
         "textEditorBackground": "#1E1C23",
+        "textScopeColor": "#111216",
         "unusedColor": "#686078"
     },
     "ui": {

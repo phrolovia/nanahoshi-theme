@@ -56,8 +56,8 @@
         "iconError": "#e62d94",
         "iconSecondaryBlend": "#B8C0F0",
         "identifierHighlight": "#3A3545",
-        "inactiveBackground": "#282530",
-        "inactiveBackgroundDarker": "#1E1C23",
+        "inactiveBackground": "#1E1C23",
+        "inactiveBackgroundDarker": "#111216",
         "infoForeground": "#A0B0F0",
         "interfaceNameColor": "#8A95E5",
         "keyColor": "#8A95E5",
@@ -66,7 +66,7 @@
         "lineNumberColor": "#787088",
         "nonProjectFileScopeColor": "#1A1820",
         "parameterColor": "#B8C0F0",
-        "popupMask": "#100E1505",
+        "popupMask": "#100E1509",
         "searchBackground": "#A0B0F0",
         "searchForeground": "#101218",
         "secondaryBackground": "#16141E",
@@ -86,6 +86,7 @@
         "terminal.ansiYellow": "#EFA554",
         "testScopeColor": "#1E1C23",
         "textEditorBackground": "#1E1C23",
+        "textScopeColor": "#111216",
         "unusedColor": "#686078"
     },
     "ui": {
