@@ -13,6 +13,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <themeProvider id="cantarella.dark" path="/themes/wutheringWaves/cantarella.dark.theme.json"/>
+        <themeProvider id="columbina.dark" path="/themes/genshinImpact/columbina.dark.theme.json"/>
         <themeProvider id="kafka.dark" path="/themes/honkaiStarRail/kafka.dark.theme.json"/>
         <themeProvider id="navia.dark" path="/themes/genshinImpact/navia.dark.theme.json"/>
         <themeProvider id="roccia.dark" path="/themes/wutheringWaves/roccia.dark.theme.json"/>

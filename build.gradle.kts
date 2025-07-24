@@ -230,8 +230,134 @@ tasks {
         }
     }
 
+    register("updateSchemeNames") {
+        description = "Update XML scheme names from corresponding JSON theme files"
+        group = "build"
+        
+        val themeDir = layout.projectDirectory.dir("src/main/resources/themes")
+        
+        doLast {
+            if (!themeDir.asFile.exists()) {
+                println("Theme directory not found: ${themeDir.asFile.absolutePath}")
+                return@doLast
+            }
+            
+            var filesProcessed = 0
+            var filesUpdated = 0
+            
+            themeDir.asFileTree.matching {
+                include("**/*.theme.json")
+            }.forEach { jsonFile ->
+                val xmlFileName = jsonFile.name.replace(".theme.json", ".xml")
+                val xmlFile = File(jsonFile.parentFile, xmlFileName)
+                
+                if (xmlFile.exists()) {
+                    try {
+                        // Read theme name from JSON
+                        val jsonContent = jsonFile.readText()
+                        val nameRegex = """"name"\s*:\s*"([^"]+)"""".toRegex()
+                        val nameMatch = nameRegex.find(jsonContent)
+                        
+                        if (nameMatch != null) {
+                            val themeName = nameMatch.groupValues[1]
+                            
+                            // Read XML content and update scheme name
+                            val xmlContent = xmlFile.readText()
+                            val schemeRegex = """<scheme name="[^"]*"""".toRegex()
+                            val newXmlContent = xmlContent.replace(schemeRegex, """<scheme name="$themeName"""")
+                            
+                            if (xmlContent != newXmlContent) {
+                                xmlFile.writeText(newXmlContent)
+                                println("Updated scheme name to '$themeName' in ${xmlFile.name}")
+                                filesUpdated++
+                            }
+                        } else {
+                            println("Warning: Could not find 'name' property in ${jsonFile.name}")
+                        }
+                    } catch (e: Exception) {
+                        println("Error processing ${jsonFile.name}: ${e.message}")
+                    }
+                } else {
+                    println("Warning: No corresponding XML file found for ${jsonFile.name}")
+                }
+                filesProcessed++
+            }
+            
+            println("Processed $filesProcessed JSON files, updated $filesUpdated XML scheme names")
+        }
+    }
+
+    register("updatePluginXml") {
+        description = "Update plugin.xml with all theme files from src/main/resources/themes"
+        group = "build"
+        
+        val themeDir = layout.projectDirectory.dir("src/main/resources/themes")
+        val pluginXmlFile = layout.projectDirectory.file("src/main/resources/META-INF/plugin.xml").asFile
+        
+        doLast {
+            if (!themeDir.asFile.exists()) {
+                println("Theme directory not found: ${themeDir.asFile.absolutePath}")
+                return@doLast
+            }
+            
+            if (!pluginXmlFile.exists()) {
+                println("Plugin XML file not found: ${pluginXmlFile.absolutePath}")
+                return@doLast
+            }
+            
+            // Collect all theme files and generate themeProvider entries
+            val themeProviders = mutableListOf<String>()
+            
+            themeDir.asFileTree.matching {
+                include("**/*.theme.json")
+            }.forEach { jsonFile ->
+                val relativePath = themeDir.asFile.toPath().relativize(jsonFile.toPath()).toString().replace("\\", "/")
+                val themeId = jsonFile.nameWithoutExtension.replace(".theme", "")
+                
+                themeProviders.add("""        <themeProvider id="$themeId" path="/themes/$relativePath"/>""")
+            }
+            
+            // Sort themeProviders by id
+            themeProviders.sort()
+            
+            // Read current plugin.xml content
+            val pluginXmlContent = pluginXmlFile.readText()
+            
+            // Replace the extensions section with updated themeProviders
+            val extensionsStartRegex = """(\s*)<extensions defaultExtensionNs="com\.intellij">""".toRegex()
+            val extensionsEndRegex = """(\s*)</extensions>""".toRegex()
+            
+            val startMatch = extensionsStartRegex.find(pluginXmlContent)
+            val endMatch = extensionsEndRegex.find(pluginXmlContent)
+            
+            if (startMatch != null && endMatch != null) {
+                val beforeExtensions = pluginXmlContent.substring(0, startMatch.range.last + 1)
+                val afterExtensions = pluginXmlContent.substring(endMatch.range.first)
+                
+                val newExtensionsContent = buildString {
+                    appendLine()
+                    themeProviders.forEach { provider ->
+                        appendLine(provider)
+                    }
+                    append("    ")
+                }
+                
+                val newPluginXmlContent = beforeExtensions + newExtensionsContent + afterExtensions
+                
+                if (pluginXmlContent != newPluginXmlContent) {
+                    pluginXmlFile.writeText(newPluginXmlContent)
+                    println("Updated plugin.xml with ${themeProviders.size} theme providers")
+                } else {
+                    println("Plugin.xml is already up to date")
+                }
+            } else {
+                println("Error: Could not find extensions section in plugin.xml")
+            }
+        }
+    }
+
     processResources {
-        dependsOn("removeItalics", "cleanProperties")
+        dependsOn("cleanProperties", "updateSchemeNames", "removeItalics", "updatePluginXml")
     }
 
     publishPlugin {
