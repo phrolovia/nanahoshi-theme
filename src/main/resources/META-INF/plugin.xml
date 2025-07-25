@@ -12,6 +12,7 @@
     ]]></description>
 
     <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="baizhi.dark" path="/themes/wutheringWaves/baizhi.dark.theme.json"/>
         <themeProvider id="cantarella.dark" path="/themes/wutheringWaves/cantarella.dark.theme.json"/>
         <themeProvider id="cantarella.v2.dark" path="/themes/wutheringWaves/cantarella.v2.dark.theme.json"/>
         <themeProvider id="carlotta.dark" path="/themes/wutheringWaves/carlotta.dark.theme.json"/>
@@ -23,5 +24,7 @@
         <themeProvider id="phrolova.dark" path="/themes/wutheringWaves/phrolova.dark.theme.json"/>
         <themeProvider id="roccia.dark" path="/themes/wutheringWaves/roccia.dark.theme.json"/>
         <themeProvider id="ruanmei.dark" path="/themes/honkaiStarRail/ruanmei.dark.theme.json"/>
+        <themeProvider id="shorekeeper.dark" path="/themes/wutheringWaves/shorekeeper.dark.theme.json"/>
+        <themeProvider id="shorekeeper.light" path="/themes/wutheringWaves/shorekeeper.light.theme.json"/>
     </extensions>
 </idea-plugin>
