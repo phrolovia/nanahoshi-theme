@@ -229,7 +229,7 @@
         </option>
         <option name="CODE_VISION_HOVERED">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
             </value>
         </option>
         <option name="COFFEESCRIPT.CLASS_NAME">
@@ -350,7 +350,7 @@
         </option>
         <option name="CSS.COLON">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
                 <option name="EFFECT_TYPE" value="5"/>
             </value>
         </option>
@@ -371,7 +371,7 @@
         </option>
         <option name="CSS.IDENT">
             <value>
-                <option name="FOREGROUND" value="686AC2"/>
+                <option name="FOREGROUND" value="AC4187"/>
             </value>
         </option>
         <option name="CSS.IMPORTANT">
@@ -612,7 +612,7 @@
         </option>
         <option name="DEFAULT_COMMA">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
             </value>
         </option>
         <option name="DEFAULT_CONSTANT">
@@ -639,7 +639,7 @@
         </option>
         <option name="DEFAULT_DOC_MARKUP">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
             </value>
         </option>
         <option name="DEFAULT_ENTITY">
@@ -707,7 +707,7 @@
         </option>
         <option name="DEFAULT_OPERATION_SIGN">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
             </value>
         </option>
         <option name="DEFAULT_PARAMETER">
@@ -754,7 +754,7 @@
         </option>
         <option name="DEFAULT_TAG">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
                 <option name="EFFECT_TYPE" value="5"/>
             </value>
         </option>
@@ -853,7 +853,7 @@
         </option>
         <option name="GHERKIN_REGEXP_PARAMETER">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
                 <option name="FONT_TYPE" value="1"/>
             </value>
         </option>
@@ -973,7 +973,7 @@
         </option>
         <option name="HTML_CUSTOM_TAG_NAME">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
             </value>
         </option>
         <option name="HTML_ENTITY_REFERENCE" baseAttributes="DEFAULT_ENTITY"/>
@@ -984,7 +984,7 @@
         </option>
         <option name="HTML_TAG_NAME">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
             </value>
         </option>
         <option name="HTTP_REQUEST_INPUT_FILE">
@@ -1041,7 +1041,7 @@
         </option>
         <option name="IGNORE.NEGATION">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
                 <option name="FONT_TYPE" value="1"/>
             </value>
         </option>
@@ -1057,7 +1057,7 @@
         </option>
         <option name="IGNORE.SYNTAX">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
                 <option name="FONT_TYPE" value="1"/>
             </value>
         </option>
@@ -1187,7 +1187,6 @@
         <option name="JS.STATIC_MEMBER_FUNCTION">
             <value>
                 <option name="FOREGROUND" value="E1A8FF"/>
-                
             </value>
         </option>
         <option name="JS.THIS_SUPER">
@@ -1262,7 +1261,6 @@
         <option name="KOTLIN_PACKAGE_PROPERTY">
             <value>
                 <option name="FOREGROUND" value="9590FF"/>
-                
             </value>
         </option>
         <option name="KOTLIN_PROPERTY_WITH_BACKING_FIELD">
@@ -1370,7 +1368,7 @@
         </option>
         <option name="MARKDOWN_NAVIGATOR.ABBREVIATION">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
             </value>
         </option>
         <option name="MARKDOWN_NAVIGATOR.ABBREVIATION_EXPANDED_TEXT">
@@ -2331,12 +2329,12 @@
         </option>
         <option name="REGEXP.BRACES">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
             </value>
         </option>
         <option name="REGEXP.BRACKETS">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
             </value>
         </option>
         <option name="REGEXP.CHAR_CLASS">
@@ -2528,7 +2526,7 @@
         </option>
         <option name="ReSharper.ASP_NET_TAG_NAME">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
             </value>
         </option>
         <option name="ReSharper.BRACE_OUTLINE">
@@ -2552,7 +2550,7 @@
         </option>
         <option name="ReSharper.CPP_PREPROCESSOR_MACRO_IDENTIFIER">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
                 <option name="FONT_TYPE" value="1"/>
             </value>
         </option>
@@ -2576,7 +2574,7 @@
         </option>
         <option name="ReSharper.DYNAMIC_PROGRAM_ANALYSIS_HIGHLIGHTER_ISSUE_FRAME">
             <value>
-                <option name="BACKGROUND" value="0D0F1A"/>
+                <option name="BACKGROUND" value="191A1800"/>
             </value>
         </option>
         <option name="ReSharper.ENUM_IDENTIFIER">
@@ -2847,7 +2845,7 @@
         <option name="WARNING_ATTRIBUTES">
             <value>
                 <option name="EFFECT_COLOR" value="f1fa8c"/>
-                <option name="ERROR_STRIPE_COLOR" value="0D0F1A"/>
+                <option name="ERROR_STRIPE_COLOR" value="191A1800"/>
                 <option name="EFFECT_TYPE" value="2"/>
             </value>
         </option>
@@ -2883,7 +2881,7 @@
         <option name="XML_TAG_DATA" baseAttributes="TEXT"/>
         <option name="XML_TAG_NAME">
             <value>
-                <option name="FOREGROUND" value="A02C68"/>
+                <option name="FOREGROUND" value="AC4187"/>
             </value>
         </option>
         <option name="XPATH.FUNCTION" baseAttributes="DEFAULT_FUNCTION_CALL"/>

@@ -64,7 +64,7 @@
         "keywordColor": "#3CA9A0",
         "lightEditorColor": "#232128",
         "lineNumberColor": "#887884",
-        "nonProjectFileScopeColor": "#19181C",
+        "nonProjectFileScopeColor": "#19181C00",
         "parameterColor": "#FFB9D8",
         "popupMask": "#100E1205",
         "searchBackground": "#E87AAA",
@@ -84,7 +84,7 @@
         "terminal.ansiMagenta": "#E64747",
         "terminal.ansiRed": "#E356A7",
         "terminal.ansiYellow": "#EFA554",
-        "testScopeColor": "#1E1A20",
+        "testScopeColor": "#1E1A2000",
         "textEditorBackground": "#1D1C20",
         "unusedColor": "#786874"
     },

@@ -129,39 +129,6 @@ tasks {
         gradleVersion = providers.gradleProperty("gradleVersion").get()
     }
 
-    register("removeItalics") {
-        description = "Remove FONT_TYPE italic options from all XML theme files"
-        group = "build"
-        
-        val themeDir = layout.projectDirectory.dir("src/main/resources/themes")
-        
-        doLast {
-            if (!themeDir.asFile.exists()) {
-                println("Theme directory not found: ${themeDir.asFile.absolutePath}")
-                return@doLast
-            }
-            
-            var filesProcessed = 0
-            var replacementCount = 0
-            
-            themeDir.asFileTree.matching {
-                include("**/*.xml")
-            }.forEach { xmlFile ->
-                val content = xmlFile.readText()
-                val newContent = content.replace("""<option name="FONT_TYPE" value="2"/>""", "")
-                
-                if (content != newContent) {
-                    val matches = """<option name="FONT_TYPE" value="2"/>""".toRegex().findAll(content).count()
-                    replacementCount += matches
-                    xmlFile.writeText(newContent)
-                }
-                filesProcessed++
-            }
-            
-            println("Processed $filesProcessed XML files, removed $replacementCount italic FONT_TYPE options")
-        }
-    }
-
     register("cleanProperties") {
         description = "Remove properties starting with specific words from JSON theme files"
         group = "build"
@@ -357,7 +324,7 @@ tasks {
     }
 
     processResources {
-        dependsOn("cleanProperties", "updateSchemeNames", "removeItalics", "updatePluginXml")
+        dependsOn("cleanProperties", "updateSchemeNames", "updatePluginXml")
     }
 
     publishPlugin {
