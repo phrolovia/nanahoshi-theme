@@ -16,6 +16,7 @@
         <themeProvider id="cantarella.dark" path="/themes/wutheringWaves/cantarella.dark.theme.json"/>
         <themeProvider id="cantarella.v2.dark" path="/themes/wutheringWaves/cantarella.v2.dark.theme.json"/>
         <themeProvider id="carlotta.dark" path="/themes/wutheringWaves/carlotta.dark.theme.json"/>
+        <themeProvider id="changli.dark" path="/themes/wutheringWaves/changli.dark.theme.json"/>
         <themeProvider id="ciaccona.dark" path="/themes/wutheringWaves/ciaccona.dark.theme.json"/>
         <themeProvider id="columbina.dark" path="/themes/genshinImpact/columbina.dark.theme.json"/>
         <themeProvider id="dehya.dark" path="/themes/genshinImpact/dehya.dark.theme.json"/>
