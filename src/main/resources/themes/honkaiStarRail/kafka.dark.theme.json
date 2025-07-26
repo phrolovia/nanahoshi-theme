@@ -1,8 +1,8 @@
 {
     "id": "58887833-d6e1-4b4f-9333-5848b4975c1c",
-    "name": "HSR: Kafka",
+    "name": "NH: Honkai Star Rail: Kafka",
     "dark": true,
-    "author": "Nanahoshi",
+    "author": "Phrolova",
     "editorScheme": "/themes/honkaiStarRail/kafka.dark.xml",
     "colors": {
         "accentColor": "#9C3862",

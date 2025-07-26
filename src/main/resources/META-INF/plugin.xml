@@ -1,15 +1,16 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
-<idea-plugin>
-    <id>com.nanahoshi.theme</id>
+<idea-plugin require-restart="true">
+    <id>com.github.phrolovia.nanahoshiTheme</id>
     <name>Nanahoshi Theme Suite</name>
-    <vendor>Nanahoshi</vendor>
-
+    <vendor>Phrolova</vendor>
+    <version>@version@</version>
     <depends>com.intellij.modules.platform</depends>
 
-    <description><![CDATA[
-    A suite of beautiful themes for JetBrains IDEs. Features the Cantarella theme series
-    with both dark and light variants, crafted with carefully selected color palettes.
-    ]]></description>
+    <description>![CDATA[
+        &lt;p&gt;
+            A collection of 17 dark themes based on various anime/game characters.
+        &lt;/p&gt;
+    ]]</description>
 
     <extensions defaultExtensionNs="com.intellij">
         <themeProvider id="baizhi.dark" path="/themes/wutheringWaves/baizhi.dark.theme.json"/>
@@ -29,6 +30,5 @@
         <themeProvider id="ruanmei.dark" path="/themes/honkaiStarRail/ruanmei.dark.theme.json"/>
         <themeProvider id="shenhe.dark" path="/themes/genshinImpact/shenhe.dark.theme.json"/>
         <themeProvider id="shorekeeper.dark" path="/themes/wutheringWaves/shorekeeper.dark.theme.json"/>
-        <themeProvider id="shorekeeper.light" path="/themes/wutheringWaves/shorekeeper.light.theme.json"/>
     </extensions>
 </idea-plugin>

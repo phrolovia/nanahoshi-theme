@@ -1,8 +1,8 @@
 {
     "id": "THEME_RUAN_MEI",
-    "name": "HSR: Ruan Mei",
+    "name": "NH: Honkai Star Rail: Ruan Mei",
     "dark": true,
-    "author": "Nanahoshi",
+    "author": "Phrolova",
     "editorScheme": "/themes/honkaiStarRail/ruanmei.dark.xml",
     "colors": {
         "accentColor": "#3A7A8A",

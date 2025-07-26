@@ -1,8 +1,8 @@
 {
     "id": "dd9a4721-33d9-4131-a57f-1096006cfa4e",
-    "name": "Wuthering Waves: Shorekeeper",
+    "name": "NH: Wuthering Waves: Shorekeeper",
     "dark": true,
-    "author": "Nanahoshi",
+    "author": "Phrolova",
     "editorScheme": "/themes/wutheringWaves/shorekeeper.dark.xml",
     "colors": {
         "accentColor": "#63B1E6",
