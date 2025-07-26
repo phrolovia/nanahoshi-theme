@@ -21,6 +21,7 @@
         <themeProvider id="columbina.dark" path="/themes/genshinImpact/columbina.dark.theme.json"/>
         <themeProvider id="dehya.dark" path="/themes/genshinImpact/dehya.dark.theme.json"/>
         <themeProvider id="eula.dark" path="/themes/genshinImpact/eula.dark.theme.json"/>
+        <themeProvider id="fuxuan.dark" path="/themes/honkaiStarRail/fuxuan.dark.theme.json"/>
         <themeProvider id="kafka.dark" path="/themes/honkaiStarRail/kafka.dark.theme.json"/>
         <themeProvider id="navia.dark" path="/themes/genshinImpact/navia.dark.theme.json"/>
         <themeProvider id="phrolova.dark" path="/themes/wutheringWaves/phrolova.dark.theme.json"/>
