@@ -638,6 +638,8 @@
         "ToolWindow.HeaderTab.hoverBackground": "highlightColor",
         "ToolWindow.HeaderTab.inactiveUnderlineColor": "accentColor",
         "ToolWindow.HeaderTab.underlineColor": "accentColor",
+        "ToolWindow.Stripe.background": "headerColor",
+        "ToolWindow.Stripe.borderColor": "borderColor",
         "Tree.background": "headerColor",
         "Tree.foreground": "foregroundColor",
         "Tree.hash": "borderColor",

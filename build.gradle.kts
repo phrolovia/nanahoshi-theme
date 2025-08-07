@@ -323,6 +323,204 @@ tasks {
         }
     }
 
+    register("addToolWindowStripeProperties") {
+        description = "Add ToolWindow.Stripe properties to all .theme.json files"
+        group = "build"
+        
+        val themeDir = layout.projectDirectory.dir("src/main/resources/themes")
+        
+        doLast {
+            if (!themeDir.asFile.exists()) {
+                println("Theme directory not found: ${themeDir.asFile.absolutePath}")
+                return@doLast
+            }
+            
+            var filesProcessed = 0
+            var filesModified = 0
+            
+            themeDir.asFileTree.matching {
+                include("**/*.theme.json")
+            }.forEach { jsonFile ->
+                val content = jsonFile.readText()
+                var modifiedContent = content
+                var needsModification = false
+                
+                // Check if the properties already exist
+                val existingStripeBackground = content.contains(""""ToolWindow\.Stripe\.background"""".toRegex())
+                val existingStripeBorderColor = content.contains(""""ToolWindow\.Stripe\.borderColor"""".toRegex())
+                
+                if (!existingStripeBackground || !existingStripeBorderColor) {
+                    needsModification = true
+                    
+                    // Find the ToolWindow.Stripe.borderColor line position or create insertion point
+                    val lines = content.lines().toMutableList()
+                    var insertionIndex = -1
+                    var backgroundExists = false
+                    var borderColorExists = false
+                    
+                    // Check which properties already exist and find insertion point
+                    for (i in lines.indices) {
+                        val line = lines[i]
+                        when {
+                            line.contains(""""ToolWindow\.Stripe\.background"""".toRegex()) -> {
+                                backgroundExists = true
+                            }
+                            line.contains(""""ToolWindow\.Stripe\.borderColor"""".toRegex()) -> {
+                                borderColorExists = true
+                                insertionIndex = i
+                            }
+                            line.contains(""""Tree\.background"""".toRegex()) && insertionIndex == -1 -> {
+                                insertionIndex = i // Insert before Tree.background as fallback
+                            }
+                        }
+                    }
+                    
+                    // If we found an insertion point, add missing properties
+                    if (insertionIndex != -1) {
+                        val linesToAdd = mutableListOf<String>()
+                        
+                        // Add background property if missing
+                        if (!backgroundExists) {
+                            linesToAdd.add("""        "ToolWindow.Stripe.background": "headerColor",""")
+                        }
+                        
+                        // Add border color property if missing
+                        if (!borderColorExists) {
+                            linesToAdd.add("""        "ToolWindow.Stripe.borderColor": "borderColor",""")
+                        }
+                        
+                        // Insert the lines
+                        var currentInsertionIndex = insertionIndex
+                        linesToAdd.forEach { lineToAdd ->
+                            lines.add(currentInsertionIndex, lineToAdd)
+                            currentInsertionIndex++
+                        }
+                        
+                        modifiedContent = lines.joinToString("\n")
+                    }
+                }
+                
+                if (needsModification) {
+                    jsonFile.writeText(modifiedContent)
+                    println("Added ToolWindow.Stripe properties to: ${jsonFile.name}")
+                    filesModified++
+                }
+                
+                filesProcessed++
+            }
+            
+            println("Processed $filesProcessed theme files, modified $filesModified files")
+        }
+    }
+
+    register("generateVSCodeThemes") {
+        description = "Generate VSCode themes from IntelliJ theme files"
+        group = "build"
+        
+        val themeDir = layout.projectDirectory.dir("src/main/resources/themes")
+        val outputDir = layout.buildDirectory.dir("vscode-themes")
+        
+        doLast {
+            if (!themeDir.asFile.exists()) {
+                println("Theme directory not found: ${themeDir.asFile.absolutePath}")
+                return@doLast
+            }
+            
+            val generator = VSCodeThemeGenerator()
+            var themesGenerated = 0
+            val themeContributions = mutableListOf<Map<String, Any>>()
+            
+            // Clean output directory
+            outputDir.get().asFile.deleteRecursively()
+            outputDir.get().asFile.mkdirs()
+            
+            // Create themes directory
+            val themesOutputDir = File(outputDir.get().asFile, "themes")
+            themesOutputDir.mkdirs()
+            
+            themeDir.asFileTree.matching {
+                include("**/*.theme.json")
+            }.forEach { jsonFile ->
+                try {
+                    val vscodeTheme = generator.generateVSCodeTheme(jsonFile)
+                    val outputFileName = "${jsonFile.nameWithoutExtension.replace(".dark.theme", "").replace(".theme", "")}-color-theme.json"
+                    val outputFile = File(themesOutputDir, outputFileName)
+                    
+                    generator.writeVSCodeTheme(vscodeTheme, outputFile)
+                    
+                    // Collect theme contribution data for package.json
+                    themeContributions.add(mapOf(
+                        "label" to vscodeTheme.name,
+                        "uiTheme" to "vs-dark",
+                        "path" to "./themes/$outputFileName"
+                    ))
+                    
+                    println("Generated VSCode theme: ${vscodeTheme.name} -> $outputFileName")
+                    themesGenerated++
+                } catch (e: Exception) {
+                    println("Error generating VSCode theme from ${jsonFile.name}: ${e.message}")
+                }
+            }
+            
+            // Generate package.json
+            val packageJson = mapOf(
+                "name" to "nanahoshi-themes",
+                "displayName" to "Nanahoshi Themes",
+                "description" to "Beautiful anime-inspired themes for VSCode, converted from IntelliJ themes",
+                "version" to "1.0.0",
+                "publisher" to "nanahoshi",
+                "engines" to mapOf("vscode" to "^1.60.0"),
+                "categories" to listOf("Themes"),
+                "contributes" to mapOf(
+                    "themes" to themeContributions
+                ),
+                "repository" to mapOf(
+                    "type" to "git",
+                    "url" to "https://github.com/nanahoshi/nanahoshi-theme"
+                ),
+                "keywords" to listOf("theme", "dark", "anime", "genshin", "honkai", "wuthering"),
+                "galleryBanner" to mapOf(
+                    "color" to "#1A1820",
+                    "theme" to "dark"
+                )
+            )
+            
+            val packageJsonFile = File(outputDir.get().asFile, "package.json")
+            val objectMapper = com.fasterxml.jackson.databind.ObjectMapper()
+            packageJsonFile.writeText(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(packageJson))
+            
+            // Generate README.md
+            val readmeContent = buildString {
+                appendLine("# Nanahoshi Themes for VSCode")
+                appendLine()
+                appendLine("Beautiful anime-inspired themes for Visual Studio Code, automatically converted from IntelliJ IDEA themes.")
+                appendLine()
+                appendLine("## Themes Included")
+                appendLine()
+                themeContributions.forEach { theme ->
+                    appendLine("- ${theme["label"]}")
+                }
+                appendLine()
+                appendLine("## Installation")
+                appendLine()
+                appendLine("1. Copy this entire folder to your VSCode extensions directory")
+                appendLine("2. Restart VSCode")
+                appendLine("3. Go to File > Preferences > Color Theme")
+                appendLine("4. Select one of the Nanahoshi themes")
+                appendLine()
+                appendLine("## Source")
+                appendLine()
+                appendLine("These themes are automatically generated from the [Nanahoshi IntelliJ Theme Plugin](https://github.com/nanahoshi/nanahoshi-theme).")
+            }
+            
+            val readmeFile = File(outputDir.get().asFile, "README.md")
+            readmeFile.writeText(readmeContent)
+            
+            println("Generated $themesGenerated VSCode themes in ${outputDir.get().asFile.absolutePath}")
+            println("Package structure created with package.json and README.md")
+        }
+    }
+
     processResources {
         dependsOn("cleanProperties", "updateSchemeNames", "updatePluginXml")
     }
