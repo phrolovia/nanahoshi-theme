@@ -522,7 +522,7 @@ tasks {
     }
 
     processResources {
-        dependsOn("cleanProperties", "updateSchemeNames", "updatePluginXml")
+        dependsOn("cleanProperties", "updateSchemeNames", "addToolWindowStripeProperties", "updatePluginXml")
     }
 
     publishPlugin {
