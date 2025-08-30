@@ -13,6 +13,7 @@
     ]]</description>
 
     <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="augusta.dark" path="/themes/wutheringWaves/augusta.dark.theme.json"/>
         <themeProvider id="baizhi.dark" path="/themes/wutheringWaves/baizhi.dark.theme.json"/>
         <themeProvider id="cantarella.dark" path="/themes/wutheringWaves/cantarella.dark.theme.json"/>
         <themeProvider id="cantarella.v2.dark" path="/themes/wutheringWaves/cantarella.v2.dark.theme.json"/>
@@ -23,6 +24,7 @@
         <themeProvider id="dehya.dark" path="/themes/genshinImpact/dehya.dark.theme.json"/>
         <themeProvider id="eula.dark" path="/themes/genshinImpact/eula.dark.theme.json"/>
         <themeProvider id="fuxuan.dark" path="/themes/honkaiStarRail/fuxuan.dark.theme.json"/>
+        <themeProvider id="hysilens.dark" path="/themes/honkaiStarRail/hysilens.dark.theme.json"/>
         <themeProvider id="iuno.dark" path="/themes/wutheringWaves/iuno.dark.theme.json"/>
         <themeProvider id="iuno.v2.dark" path="/themes/wutheringWaves/iuno.v2.dark.theme.json"/>
         <themeProvider id="kafka.dark" path="/themes/honkaiStarRail/kafka.dark.theme.json"/>
