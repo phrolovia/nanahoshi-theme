@@ -27,6 +27,7 @@
         <themeProvider id="hysilens.dark" path="/themes/honkaiStarRail/hysilens.dark.theme.json"/>
         <themeProvider id="iuno.dark" path="/themes/wutheringWaves/iuno.dark.theme.json"/>
         <themeProvider id="iuno.v2.dark" path="/themes/wutheringWaves/iuno.v2.dark.theme.json"/>
+        <themeProvider id="jingliu.dark" path="/themes/honkaiStarRail/jingliu.dark.theme.json"/>
         <themeProvider id="kafka.dark" path="/themes/honkaiStarRail/kafka.dark.theme.json"/>
         <themeProvider id="navia.dark" path="/themes/genshinImpact/navia.dark.theme.json"/>
         <themeProvider id="phrolova.dark" path="/themes/wutheringWaves/phrolova.dark.theme.json"/>
