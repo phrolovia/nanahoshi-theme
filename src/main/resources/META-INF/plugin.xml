@@ -30,6 +30,7 @@
         <themeProvider id="kafka.dark" path="/themes/honkaiStarRail/kafka.dark.theme.json"/>
         <themeProvider id="navia.dark" path="/themes/genshinImpact/navia.dark.theme.json"/>
         <themeProvider id="phrolova.dark" path="/themes/wutheringWaves/phrolova.dark.theme.json"/>
+        <themeProvider id="rappa.dark" path="/themes/honkaiStarRail/rappa.dark.theme.json"/>
         <themeProvider id="roccia.dark" path="/themes/wutheringWaves/roccia.dark.theme.json"/>
         <themeProvider id="ruanmei.dark" path="/themes/honkaiStarRail/ruanmei.dark.theme.json"/>
         <themeProvider id="shenhe.dark" path="/themes/genshinImpact/shenhe.dark.theme.json"/>
