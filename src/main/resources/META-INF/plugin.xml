@@ -34,6 +34,7 @@
         <themeProvider id="ruanmei.dark" path="/themes/honkaiStarRail/ruanmei.dark.theme.json"/>
         <themeProvider id="shenhe.dark" path="/themes/genshinImpact/shenhe.dark.theme.json"/>
         <themeProvider id="shorekeeper.dark" path="/themes/wutheringWaves/shorekeeper.dark.theme.json"/>
+        <themeProvider id="sparkle.dark" path="/themes/honkaiStarRail/sparkle.dark.theme.json"/>
         <themeProvider id="zhezhi.dark" path="/themes/wutheringWaves/zhezhi.dark.theme.json"/>
     </extensions>
 </idea-plugin>
