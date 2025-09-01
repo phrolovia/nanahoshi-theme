@@ -31,6 +31,7 @@
         <themeProvider id="iuno.v2.dark" path="/themes/wutheringWaves/iuno.v2.dark.theme.json"/>
         <themeProvider id="jade.dark" path="/themes/honkaiStarRail/jade.dark.theme.json"/>
         <themeProvider id="jingliu.dark" path="/themes/honkaiStarRail/jingliu.dark.theme.json"/>
+        <themeProvider id="jinhsi.dark" path="/themes/wutheringWaves/jinhsi.dark.theme.json"/>
         <themeProvider id="kafka.dark" path="/themes/honkaiStarRail/kafka.dark.theme.json"/>
         <themeProvider id="kafka.v2.dark" path="/themes/honkaiStarRail/kafka.v2.dark.theme.json"/>
         <themeProvider id="lingsha.dark" path="/themes/honkaiStarRail/lingsha.dark.theme.json"/>
