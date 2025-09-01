@@ -47,7 +47,7 @@
         <option name="FILESTATUS_OBSOLETE" value="B4CDFF"/>
         <option name="FILESTATUS_SUPPRESSED" value="4C566A"/>
         <option name="FILESTATUS_SWITCHED" value="B4CDFF"/>
-        <option name="FILESTATUS_UNKNOWN" value="EBCB8B"/>
+        <option name="FILESTATUS_UNKNOWN" value="FFCC75"/>
         <option name="FILESTATUS_addedOutside" value="4C566A"/>
         <option name="FILESTATUS_changelistConflict" value="EBCB8B"/>
         <option name="FILESTATUS_modifiedOutside" value="79B8FF"/>
@@ -125,7 +125,7 @@
     <attributes>
         <option name="ABSTRACT_CLASS_NAME_ATTRIBUTES">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="ANGLE_BRACKETS_RAINBOW_COLOR0">
@@ -140,7 +140,7 @@
         </option>
         <option name="ANGLE_BRACKETS_RAINBOW_COLOR2">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="ANGLE_BRACKETS_RAINBOW_COLOR3">
@@ -234,7 +234,7 @@
         </option>
         <option name="COFFEESCRIPT.CLASS_NAME">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="COFFEESCRIPT.GLOBAL_VARIABLE" baseAttributes="JS.GLOBAL_VARIABLE"/>
@@ -325,7 +325,7 @@
         </option>
         <option name="CONSOLE_USER_INPUT">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="CONSOLE_WHITE_OUTPUT">
@@ -366,7 +366,7 @@
         </option>
         <option name="CSS.HASH">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="CSS.IDENT">
@@ -396,7 +396,7 @@
         </option>
         <option name="CSS.PSEUDO">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="CSS.TAG_NAME">
@@ -602,12 +602,12 @@
         </option>
         <option name="DEFAULT_CLASS_NAME">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="DEFAULT_CLASS_REFERENCE">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="DEFAULT_COMMA">
@@ -654,7 +654,7 @@
         </option>
         <option name="DEFAULT_FUNCTION_DECLARATION">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="DEFAULT_HIGHLIGHTED_REFERENCE">
@@ -680,7 +680,7 @@
         </option>
         <option name="DEFAULT_INVALID_STRING_ESCAPE">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
                 <option name="EFFECT_COLOR" value="BF616A"/>
                 <option name="EFFECT_TYPE" value="2"/>
             </value>
@@ -717,7 +717,7 @@
         </option>
         <option name="DEFAULT_PREDEFINED_SYMBOL">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="DEFAULT_REASSIGNED_LOCAL_VARIABLE">
@@ -909,7 +909,7 @@
         </option>
         <option name="GO_PACKAGE">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="GO_PACKAGE_EXPORTED_CONSTANT">
@@ -934,7 +934,7 @@
         </option>
         <option name="GO_TYPE_REFERENCE">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="GRID_ERROR_VALUE">
@@ -952,7 +952,7 @@
         </option>
         <option name="HAML_CLASS">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="HAML_COMMENT" baseAttributes="DEFAULT_DOC_COMMENT"/>
@@ -960,7 +960,7 @@
         <option name="HAML_FILTER_CONTENT" baseAttributes="DEFAULT_TEMPLATE_LANGUAGE_COLOR"/>
         <option name="HAML_ID">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="HAML_RUBY_CODE" baseAttributes="INJECTED_LANGUAGE_FRAGMENT"/>
@@ -989,7 +989,7 @@
         </option>
         <option name="HTTP_REQUEST_INPUT_FILE">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="HTTP_REQUEST_PARAMETER_NAME">
@@ -1034,7 +1034,7 @@
         </option>
         <option name="IGNORE.HEADER">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
                 <option name="BACKGROUND" value="222838"/>
                 <option name="FONT_TYPE" value="1"/>
             </value>
@@ -1420,7 +1420,7 @@
         </option>
         <option name="MARKDOWN_NAVIGATOR.BULLET_LIST">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
                 <option name="FONT_TYPE" value="1"/>
             </value>
         </option>
@@ -2143,7 +2143,7 @@
         </option>
         <option name="MARKDOWN_NAVIGATOR.VERBATIM_LANG">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="MARKDOWN_NAVIGATOR.VERBATIM_MARKER">
@@ -2215,7 +2215,7 @@
         </option>
         <option name="OC.STRUCT_LIKE">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="OC.TYPEDEF">
@@ -2263,7 +2263,7 @@
         </option>
         <option name="PY.DECORATOR">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="PY.KEYWORD">
@@ -2298,7 +2298,7 @@
         </option>
         <option name="RDOC_DIRECTIVE">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="RDOC_EMAIL">
@@ -2396,7 +2396,7 @@
         </option>
         <option name="ROUND_BRACKETS_RAINBOW_COLOR2">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="ROUND_BRACKETS_RAINBOW_COLOR3">
@@ -2411,7 +2411,7 @@
         </option>
         <option name="RUBY_CONSTANT">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="RUBY_HEREDOC_ID">
@@ -2590,7 +2590,7 @@
         </option>
         <option name="ReSharper.EXTENSION_METHOD_IDENTIFIER">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="ReSharper.FORMAT_STRING_ITEM">
@@ -2636,7 +2636,7 @@
         </option>
         <option name="SASS_MIXIN">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="SASS_VARIABLE">
@@ -2653,7 +2653,7 @@
         </option>
         <option name="SLIM_CLASS">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="SLIM_TAG_ATTR_KEY">
@@ -2697,7 +2697,7 @@
         </option>
         <option name="SQUARE_BRACKETS_RAINBOW_COLOR2">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="SQUARE_BRACKETS_RAINBOW_COLOR3">
@@ -2722,7 +2722,7 @@
         </option>
         <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR2">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
             </value>
         </option>
         <option name="SQUIGGLY_BRACKETS_RAINBOW_COLOR3">
@@ -2892,7 +2892,7 @@
         </option>
         <option name="XPATH.XPATH_NAME">
             <value>
-                <option name="FOREGROUND" value="EBCB8B"/>
+                <option name="FOREGROUND" value="FFCC75"/>
                 <option name="EFFECT_TYPE" value="5"/>
             </value>
         </option>
