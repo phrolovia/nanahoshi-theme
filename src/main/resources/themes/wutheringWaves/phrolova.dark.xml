@@ -55,9 +55,9 @@
         <option name="GUTTER_BACKGROUND" value="1D1C20"/>
         <option name="GrepConsole.debug.foreground" value="6272a4"/>
         <option name="GrepConsole.error.background" value="704050"/>
-        <option name="GrepConsole.fatal.background" value="784068"/>
+        <option name="GrepConsole.fatal.background" value="784080"/>
         <option name="GrepConsole.trace.foreground" value="786068"/>
-        <option name="GrepConsole.warn.background" value="706848"/>
+        <option name="GrepConsole.warn.background" value="D0B57A"/>
         <option name="INDENT_GUIDE" value="33272A"/>
         <option name="INFORMATION_HINT" value="19181C"/>
         <option name="INLINE_REFACTORING_SETTINGS_DEFAULT" value="E58A952A"/>
@@ -270,7 +270,7 @@
         </option>
         <option name="CONSOLE_ERROR_OUTPUT">
             <value>
-                <option name="FOREGROUND" value="C06090"/>
+                <option name="FOREGROUND" value="D85A8C"/>
             </value>
         </option>
         <option name="CONSOLE_GREEN_BRIGHT_OUTPUT">
@@ -285,7 +285,7 @@
         </option>
         <option name="CONSOLE_MAGENTA_BRIGHT_OUTPUT">
             <value>
-                <option name="FOREGROUND" value="C06090"/>
+                <option name="FOREGROUND" value="D85A8C"/>
             </value>
         </option>
         <option name="CONSOLE_MAGENTA_OUTPUT">
@@ -681,7 +681,7 @@
         <option name="DEFAULT_INVALID_STRING_ESCAPE">
             <value>
                 <option name="FOREGROUND" value="C53C61"/>
-                <option name="EFFECT_COLOR" value="C06090"/>
+                <option name="EFFECT_COLOR" value="D85A8C"/>
                 <option name="EFFECT_TYPE" value="2"/>
             </value>
         </option>
@@ -813,8 +813,8 @@
         </option>
         <option name="ERRORS_ATTRIBUTES">
             <value>
-                <option name="EFFECT_COLOR" value="C06090"/>
-                <option name="ERROR_STRIPE_COLOR" value="C06090"/>
+                <option name="EFFECT_COLOR" value="D85A8C"/>
+                <option name="ERROR_STRIPE_COLOR" value="D85A8C"/>
                 <option name="EFFECT_TYPE" value="2"/>
             </value>
         </option>
@@ -939,8 +939,8 @@
         </option>
         <option name="GRID_ERROR_VALUE">
             <value>
-                <option name="EFFECT_COLOR" value="C06090"/>
-                <option name="ERROR_STRIPE_COLOR" value="C06090"/>
+                <option name="EFFECT_COLOR" value="D85A8C"/>
+                <option name="ERROR_STRIPE_COLOR" value="D85A8C"/>
                 <option name="EFFECT_TYPE" value="2"/>
             </value>
         </option>
@@ -1128,7 +1128,7 @@
         </option>
         <option name="INLINE_STACK_FRAMES">
             <value>
-                <option name="BACKGROUND" value="584548"/>
+                <option name="BACKGROUND" value="484550"/>
             </value>
         </option>
         <option name="INSTANCE_FIELD_ATTRIBUTES" baseAttributes="DEFAULT_INSTANCE_FIELD"/>
@@ -1309,7 +1309,7 @@
         </option>
         <option name="LOG_ERROR_OUTPUT">
             <value>
-                <option name="FOREGROUND" value="C06090"/>
+                <option name="FOREGROUND" value="D85A8C"/>
             </value>
         </option>
         <option name="LOG_INFO_OUTPUT">
@@ -2355,7 +2355,7 @@
         <option name="REGEXP.INVALID_STRING_ESCAPE">
             <value>
                 <option name="FOREGROUND" value="f8f8f2"/>
-                <option name="EFFECT_COLOR" value="C06090"/>
+                <option name="EFFECT_COLOR" value="D85A8C"/>
                 <option name="EFFECT_TYPE" value="2"/>
             </value>
         </option>
@@ -2864,9 +2864,9 @@
         </option>
         <option name="WRONG_REFERENCES_ATTRIBUTES">
             <value>
-                <option name="FOREGROUND" value="C06090"/>
-                <option name="EFFECT_COLOR" value="C06090"/>
-                <option name="ERROR_STRIPE_COLOR" value="C06090"/>
+                <option name="FOREGROUND" value="D85A8C"/>
+                <option name="EFFECT_COLOR" value="D85A8C"/>
+                <option name="ERROR_STRIPE_COLOR" value="D85A8C"/>
                 <option name="EFFECT_TYPE" value="2"/>
             </value>
         </option>

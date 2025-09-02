@@ -323,96 +323,6 @@ tasks {
         }
     }
 
-    register("addToolWindowStripeProperties") {
-        description = "Add ToolWindow.Stripe properties to all .theme.json files"
-        group = "build"
-        
-        val themeDir = layout.projectDirectory.dir("src/main/resources/themes")
-        
-        doLast {
-            if (!themeDir.asFile.exists()) {
-                println("Theme directory not found: ${themeDir.asFile.absolutePath}")
-                return@doLast
-            }
-            
-            var filesProcessed = 0
-            var filesModified = 0
-            
-            themeDir.asFileTree.matching {
-                include("**/*.theme.json")
-            }.forEach { jsonFile ->
-                val content = jsonFile.readText()
-                var modifiedContent = content
-                var needsModification = false
-                
-                // Check if the properties already exist
-                val existingStripeBackground = content.contains(""""ToolWindow\.Stripe\.background"""".toRegex())
-                val existingStripeBorderColor = content.contains(""""ToolWindow\.Stripe\.borderColor"""".toRegex())
-                
-                if (!existingStripeBackground || !existingStripeBorderColor) {
-                    needsModification = true
-                    
-                    // Find the ToolWindow.Stripe.borderColor line position or create insertion point
-                    val lines = content.lines().toMutableList()
-                    var insertionIndex = -1
-                    var backgroundExists = false
-                    var borderColorExists = false
-                    
-                    // Check which properties already exist and find insertion point
-                    for (i in lines.indices) {
-                        val line = lines[i]
-                        when {
-                            line.contains(""""ToolWindow\.Stripe\.background"""".toRegex()) -> {
-                                backgroundExists = true
-                            }
-                            line.contains(""""ToolWindow\.Stripe\.borderColor"""".toRegex()) -> {
-                                borderColorExists = true
-                                insertionIndex = i
-                            }
-                            line.contains(""""Tree\.background"""".toRegex()) && insertionIndex == -1 -> {
-                                insertionIndex = i // Insert before Tree.background as fallback
-                            }
-                        }
-                    }
-                    
-                    // If we found an insertion point, add missing properties
-                    if (insertionIndex != -1) {
-                        val linesToAdd = mutableListOf<String>()
-                        
-                        // Add background property if missing
-                        if (!backgroundExists) {
-                            linesToAdd.add("""        "ToolWindow.Stripe.background": "headerColor",""")
-                        }
-                        
-                        // Add border color property if missing
-                        if (!borderColorExists) {
-                            linesToAdd.add("""        "ToolWindow.Stripe.borderColor": "borderColor",""")
-                        }
-                        
-                        // Insert the lines
-                        var currentInsertionIndex = insertionIndex
-                        linesToAdd.forEach { lineToAdd ->
-                            lines.add(currentInsertionIndex, lineToAdd)
-                            currentInsertionIndex++
-                        }
-                        
-                        modifiedContent = lines.joinToString("\n")
-                    }
-                }
-                
-                if (needsModification) {
-                    jsonFile.writeText(modifiedContent)
-                    println("Added ToolWindow.Stripe properties to: ${jsonFile.name}")
-                    filesModified++
-                }
-                
-                filesProcessed++
-            }
-            
-            println("Processed $filesProcessed theme files, modified $filesModified files")
-        }
-    }
-
     register("generateVSCodeThemes") {
         description = "Generate VSCode themes from IntelliJ theme files"
         group = "build"
@@ -522,7 +432,7 @@ tasks {
     }
 
     processResources {
-        dependsOn("cleanProperties", "updateSchemeNames", "addToolWindowStripeProperties", "updatePluginXml")
+        dependsOn("cleanProperties", "updateSchemeNames", "updatePluginXml", "generateVSCodeThemes")
     }
 
     publishPlugin {

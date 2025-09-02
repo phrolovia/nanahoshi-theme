@@ -442,7 +442,7 @@
         "Plugins.Button.updateForeground": "baseBackground",
         "Plugins.disabledForeground": "disabledColor",
         "Plugins.hoverBackground": "selectionInactive",
-        "Plugins.lightSelectionBackground": "selectionBackground",
+        "Plugins.lightSelectionBackground": "selectionBackgroundTransparent",
         "Plugins.SearchField.background": "secondaryBackground",
         "Plugins.SearchField.borderColor": "borderColor",
         "Plugins.SectionHeader.background": "headerColor",
