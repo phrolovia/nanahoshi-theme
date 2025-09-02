@@ -28,6 +28,7 @@
         <themeProvider id="firefly.dark" path="/themes/honkaiStarRail/firefly.dark.theme.json"/>
         <themeProvider id="firefly.v2.dark" path="/themes/honkaiStarRail/firefly.v2.dark.theme.json"/>
         <themeProvider id="fuxuan.dark" path="/themes/honkaiStarRail/fuxuan.dark.theme.json"/>
+        <themeProvider id="hyacine.dark" path="/themes/honkaiStarRail/hyacine.dark.theme.json"/>
         <themeProvider id="hysilens.dark" path="/themes/honkaiStarRail/hysilens.dark.theme.json"/>
         <themeProvider id="iuno.dark" path="/themes/wutheringWaves/iuno.dark.theme.json"/>
         <themeProvider id="iuno.v2.dark" path="/themes/wutheringWaves/iuno.v2.dark.theme.json"/>
