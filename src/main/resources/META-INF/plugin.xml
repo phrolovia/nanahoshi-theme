@@ -48,6 +48,7 @@
         <themeProvider id="shorekeeper.dark" path="/themes/wutheringWaves/shorekeeper.dark.theme.json"/>
         <themeProvider id="sparkle.dark" path="/themes/honkaiStarRail/sparkle.dark.theme.json"/>
         <themeProvider id="topaz.dark" path="/themes/honkaiStarRail/topaz.dark.theme.json"/>
+        <themeProvider id="yixuan.dark" path="/themes/zenlessZoneZero/yixuan.dark.theme.json"/>
         <themeProvider id="zhezhi.dark" path="/themes/wutheringWaves/zhezhi.dark.theme.json"/>
     </extensions>
 </idea-plugin>
