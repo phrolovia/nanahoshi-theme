@@ -1,4 +1,4 @@
-<scheme name="Cerydra" parent_scheme="Darcula">
+<scheme name="NH: Honkai Star Rail: Cerydra" parent_scheme="Darcula">
     <option name="FONT_SCALE" value="1.0"/>
     <metaInfo>
         <property name="ide">idea</property>

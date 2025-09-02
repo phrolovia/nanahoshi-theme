@@ -2176,6 +2176,11 @@
         <option name="NG.EXPRESSIONS">
             <value/>
         </option>
+        <option name="NG.SIGNAL">
+            <value>
+                <option name="FOREGROUND" value="5FD1F5"/>
+            </value>
+        </option>
         <option name="NOT_TOP_FRAME_ATTRIBUTES">
             <value>
                 <option name="BACKGROUND" value="222225"/>

@@ -74,6 +74,7 @@
         "selectionBackgroundTransparent": "#3860A8AA",
         "selectionForeground": "#E8F0F8",
         "selectionInactive": "#284880",
+        "signalColor": "#68AAA2",
         "startColor": "#202430",
         "stopColor": "#E8B858",
         "stringColor": "#7DA8E5",
